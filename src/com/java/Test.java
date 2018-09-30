@@ -40,10 +40,9 @@ public class Test {
 		list17.add("aspero");
 
 		Iterator<String> it = list17.iterator(); // Iterator aciones CRUD
-		while (it.hasNext()) {
+		while (it.hasNext()) 
 			System.out.println(it.next());
-		}
-
+		
 		System.err.println("java 1.8");
 		// java 1.8
 		List<String> list18 = Stream.of("pepo", "retutu", "polaco").collect(Collectors.toList());
