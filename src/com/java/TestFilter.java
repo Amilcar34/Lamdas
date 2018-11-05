@@ -34,8 +34,7 @@ public class TestFilter {
 
 		System.err.println("solo type amazon y google");
 		list.stream().filter(t -> t.getType() == Type.AMAZON || t.getType() == Type.GOOGLE).forEach(t-> System.out.println(t.getType()));
-
-
+		
 	}
 }
 class Search{
