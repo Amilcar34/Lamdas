@@ -29,7 +29,12 @@ public class TestPredicate {
 		camisas3.forEach(System.err::println);
 		
 		//Manera 3
-		camisas.stream().filter(c -> c.getTalle().equals(Talle.M)).forEach(System.out::println);;
+		camisas.stream().filter(c -> c.getTalle().equals(Talle.M)).forEach(System.out::println);
+		
+		//Manera 4 - uso de test()
+		for (Camisa camisa : camisas3) 
+			if(isAmarillo.test(camisa))
+				System.err.println(camisa);
 		
 	}
 

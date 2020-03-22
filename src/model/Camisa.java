@@ -5,6 +5,12 @@ public class Camisa {
 	final String color;
 	final Talle talle;
 	
+	public Camisa() {
+		super();
+		this.color = "";
+		this.talle = null;
+	}
+
 	public Camisa(String color, Talle talle) {
 		this.color = color;
 		this.talle = talle;
