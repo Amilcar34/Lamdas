@@ -2,7 +2,6 @@ package app.function;
 
 import java.util.List;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import dao.IGenericManager;
@@ -20,6 +19,7 @@ public class AppFunction {
 		//Metodo 1 - uso de apply()
 		String apply = toString.apply(2l);
 		System.out.println(apply);
+		
 		
 		IGenericManager<Camisa> manager = new ManagerCamisa();
 		List<Camisa> camisas = manager.getAll();

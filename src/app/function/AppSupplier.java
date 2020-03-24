@@ -7,16 +7,20 @@ import model.Talle;
 
 public class AppSupplier {
 
-	static Supplier<Camisa> supplier = () -> new Camisa("Negro", Talle.XXL);
+	//expresion Lamda
+	static Supplier<Camisa> supplierLamda = () -> new Camisa("Negro", Talle.XXL);
+	
+	//expresion Metodo por referencia
+	static Supplier<Camisa> supplierReferencia = Camisa::new;
 	
 	public static void main(String[] args) {
 		
 		//Metodo 1
-		Camisa factory = factory(Camisa::new);
+		Camisa factory = factory(supplierReferencia);
 		System.out.println(factory);
 		
 		//Metodo 2 - uso de get()
-		Camisa camisa = supplier.get();
+		Camisa camisa = supplierLamda.get();
 		System.out.println(camisa);
 	}
 

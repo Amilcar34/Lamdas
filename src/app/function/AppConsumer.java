@@ -9,29 +9,35 @@ import model.Camisa;
 
 public class AppConsumer {
 
-	static Consumer<Camisa> consumer = c -> System.out.println(c);
+	//expresion Lamda
+	static Consumer<Camisa> consumerLamda = c -> System.out.println(c);
 
+	//expresion por referencia
+	static Consumer<Camisa> consumerReferencia = System.out::println;
+
+	
 	public static void main(String[] args) {
 
 		IGenericManager<Camisa> manager = new ManagerCamisa();
 		List<Camisa> camisas = manager.getAll();
 
 		// Metodo 1
-		camisas.forEach(consumer);
+		camisas.forEach(consumerLamda);
 
 		// Metodo 2 - uso implisito
 		camisas.forEach(c -> System.err.println(c));
 		
-		// Metodo 3 - uso de accept()
+		// Metodo 3 - uso de metodo como parametro
 		camisas.forEach(AppConsumer::imprimir);
 
-		// Metodo 4 - uso de accept()
+		// Metodo 4 - uso de accept() y expresion por referencia
 		for (Camisa camisa : camisas)
-			consumer.accept(camisa);
+			consumerReferencia.accept(camisa);
 	}
 
+	//uso de accept() y expresion lamda
 	static void imprimir(Camisa camisa) {
-		consumer.accept(camisa);
+		consumerLamda.accept(camisa);
 	}
 
 }

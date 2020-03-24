@@ -25,7 +25,7 @@ public class AppPredicate {
 		//Manera 2
 		Predicate<Camisa> isAmarillo = c -> c.getColor().equalsIgnoreCase("amarillo");
 		CamisaController camisaController2 = new CamisaController();
-		List<Camisa> camisas3 = camisaController1.filtrarCamisa(camisas, isAmarillo);
+		List<Camisa> camisas3 = camisaController2.filtrarCamisa(camisas, isAmarillo);
 		camisas3.forEach(System.err::println);
 		
 		//Manera 3

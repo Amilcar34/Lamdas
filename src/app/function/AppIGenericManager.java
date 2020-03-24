@@ -28,9 +28,6 @@ public class AppIGenericManager {
 
 	static <T> void imprimir(IGenericManager<T> manager) {
 		List<T> list = manager.getAll();
-		long count = list.stream().distinct().count();
-		
 		System.err.println(list.size());
-		System.err.println(count); //solo cuanta resultados distintos
 	}
 }
