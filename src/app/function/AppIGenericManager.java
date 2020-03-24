@@ -16,18 +16,20 @@ public class AppIGenericManager {
 
 		//Metodo 1
 		IGenericManager<String> managerString = () -> Arrays.asList("Jorge", "Alan", "Leo", "Pablo");
-		imprimir(managerString);
+		imprimirData(managerString);
 		
 		//Metodo 2
 		List<Talle> talles = managerTalles.getAll();
 		talles.forEach(System.out::println);
 		
 		//Metodo 3
-		imprimir(() -> Collections.singletonList(new Camisa("Verde", Talle.M)));
+		imprimirData(() -> Collections.singletonList(new Camisa("Verde", Talle.M)));
 	}
 
-	static <T> void imprimir(IGenericManager<T> manager) {
+	static <T> void imprimirData(IGenericManager<T> manager) {
 		List<T> list = manager.getAll();
 		System.err.println(list.size());
+		System.err.println(list.isEmpty());
+		System.err.println(list.toString());
 	}
 }
