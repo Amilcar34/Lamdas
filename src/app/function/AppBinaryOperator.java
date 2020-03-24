@@ -18,7 +18,7 @@ public class AppBinaryOperator {
 		
 		// metodo 3 - expresion: metodo por referencia
 		BinaryOperator<Integer> divideReferencia = Integer::divideUnsigned;
-		System.err.println(divideReferencia.apply(DIEZ, CINCO));
+		System.out.println(divideReferencia.apply(DIEZ, CINCO));
 
 	}
 
