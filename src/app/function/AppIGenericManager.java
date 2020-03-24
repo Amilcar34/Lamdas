@@ -15,7 +15,7 @@ public class AppIGenericManager {
 	public static void main(String[] args) {
 
 		//Metodo 1
-		IGenericManager<String> managerString = () -> Arrays.asList("Jorge", "Alan", "Leo", "Pablo", "Alan");
+		IGenericManager<String> managerString = () -> Arrays.asList("Jorge", "Alan", "Leo", "Pablo");
 		imprimir(managerString);
 		
 		//Metodo 2
