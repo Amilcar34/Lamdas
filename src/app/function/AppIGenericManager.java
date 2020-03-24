@@ -1,4 +1,4 @@
-package functions;
+package app.function;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -8,7 +8,7 @@ import dao.IGenericManager;
 import model.Camisa;
 import model.Talle;
 
-public class TestIGenericManager {
+public class AppIGenericManager {
 
 	static IGenericManager<Talle> managerTalles = () -> Arrays.asList(Talle.L, Talle.XL, Talle.XXL );
 	

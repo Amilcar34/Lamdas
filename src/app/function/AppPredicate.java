@@ -1,4 +1,4 @@
-package functions;
+package app.function;
 
 import java.util.List;
 import java.util.function.Predicate;
@@ -9,7 +9,7 @@ import dao.ManagerCamisa;
 import model.Camisa;
 import model.Talle;
 
-public class TestPredicate {
+public class AppPredicate {
 	
 	public static void main(String[] args) {
 		

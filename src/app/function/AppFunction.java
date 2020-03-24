@@ -1,4 +1,4 @@
-package functions;
+package app.function;
 
 import java.util.List;
 import java.util.function.Function;
@@ -10,7 +10,7 @@ import dao.ManagerCamisa;
 import model.Camisa;
 import model.Talle;
 
-public class TestFunction {
+public class AppFunction {
 	
 	static Function<Camisa, Talle> getTalle = c -> c.getTalle();
 

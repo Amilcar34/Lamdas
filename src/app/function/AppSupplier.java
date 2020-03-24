@@ -1,11 +1,11 @@
-package functions;
+package app.function;
 
 import java.util.function.Supplier;
 
 import model.Camisa;
 import model.Talle;
 
-public class TestSupplier {
+public class AppSupplier {
 
 	static Supplier<Camisa> supplier = () -> new Camisa("Negro", Talle.XXL);
 	

@@ -1,4 +1,4 @@
-package functions;
+package app.function;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -7,7 +7,7 @@ import dao.IGenericManager;
 import dao.ManagerCamisa;
 import model.Camisa;
 
-public class TestConsumer {
+public class AppConsumer {
 
 	static Consumer<Camisa> consumer = c -> System.out.println(c);
 
@@ -23,7 +23,7 @@ public class TestConsumer {
 		camisas.forEach(c -> System.err.println(c));
 		
 		// Metodo 3 - uso de accept()
-		camisas.forEach(TestConsumer::imprimir);
+		camisas.forEach(AppConsumer::imprimir);
 
 		// Metodo 4 - uso de accept()
 		for (Camisa camisa : camisas)
