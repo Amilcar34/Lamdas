@@ -20,16 +20,16 @@ public class AppPredicate {
 		CamisaController camisaController1 = new CamisaController();
 		CamisaController camisaControllerIsRojo = new CamisaController();
 		List<Camisa> camisas2 = camisaController1.filtrarCamisa(camisas, camisaControllerIsRojo.isRojo());
-		camisas2.forEach(System.out::println);
+		camisas2.forEach(System.err::println);
 		
 		//Manera 2
 		Predicate<Camisa> isAmarillo = c -> c.getColor().equalsIgnoreCase("amarillo");
 		CamisaController camisaController2 = new CamisaController();
 		List<Camisa> camisas3 = camisaController2.filtrarCamisa(camisas, isAmarillo);
-		camisas3.forEach(System.err::println);
+		camisas3.forEach(System.out::println);
 		
 		//Manera 3
-		camisas.stream().filter(c -> c.getTalle().equals(Talle.M)).forEach(System.out::println);
+		camisas.stream().filter(c -> c.getTalles().stream().findAny().get().equals(Talle.M)).forEach(System.out::println);
 		
 		//Manera 4 - uso de test()
 		for (Camisa camisa : camisas3) 

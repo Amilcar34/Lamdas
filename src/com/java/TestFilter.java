@@ -2,15 +2,14 @@ package com.java;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
 public class TestFilter {
 
 	public static void main(String[] args) {
-		//findfirst devuelve el primero en su reccorrido
+		//findFirst devuelve el primero en su reccorrido
 		System.out.println(IntStream.range(0, 100).parallel().findFirst());
-		//findany devuelve el primero que encuentre
+		//findAny devuelve el primero que encuentre
 		System.out.println(IntStream.range(0, 100).parallel().findAny());
 
 		
@@ -30,8 +29,9 @@ public class TestFilter {
 		System.out.println(optional2.get().getType().getValue());
 		
 		//Evitamos instanciar algo que sea null si incluimos orElse(null)
-		Search le = list.stream().filter(t -> t.getType() == Type.AMAZON).findAny().orElse(null);
-
+		Search search1 = list.stream().filter(t -> t.getType() == Type.AMAZON).findAny().orElse(null);
+		System.out.println(search1);
+		
 		System.err.println("solo type amazon y google");
 		list.stream().filter(t -> t.getType() == Type.AMAZON || t.getType() == Type.GOOGLE).forEach(t-> System.out.println(t.getType()));
 		
@@ -43,6 +43,10 @@ class Search{
 	public Search(Type type) { this.type = type; }
 
 	public Type getType() {	return type; }
+
+	@Override
+	public String toString() {	return "Search [type=" + type + "]";	}
+	
 }
 enum Type{
 	GOOGLE("google"), EBAY("ebay"), AMAZON("amazon"), VISION("vision");

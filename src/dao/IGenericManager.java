@@ -6,5 +6,5 @@ import java.util.List;
 public interface IGenericManager<T> {
 
 	List<T> getAll();
-	
+
 }

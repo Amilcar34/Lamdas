@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 
 public class Test {
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void main(String[] args) {
 		System.out.println("---- run -------");
 
@@ -29,7 +30,7 @@ public class Test {
 		list15.add("papa");
 
 		for (String string : list15) // for each comun, solo sirve para acciones de lectura
-			System.out.println(list15); // no se puede modificar la lista cuando es recorrida por un for each
+			System.out.println(string); // no se puede modificar la lista cuando es recorrida por un for each
 
 		System.err.println("Java 1.7");
 		// java 1.7

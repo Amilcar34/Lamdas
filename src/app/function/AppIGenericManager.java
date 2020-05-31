@@ -23,7 +23,7 @@ public class AppIGenericManager {
 		talles.forEach(System.out::println);
 		
 		//Metodo 3
-		imprimirData(() -> Collections.singletonList(new Camisa("Verde", Talle.M)));
+		imprimirData(() -> Collections.singletonList(new Camisa("Verde", Collections.singletonList(Talle.M))));
 	}
 
 	static <T> void imprimirData(IGenericManager<T> manager) {

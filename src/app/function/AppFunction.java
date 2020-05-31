@@ -11,11 +11,11 @@ import model.Talle;
 
 public class AppFunction {
 	
-	static Function<Camisa, Talle> getTalle = c -> c.getTalle();
+	static Function<Camisa, List<Talle>> getTalle = c -> c.getTalles();
 
 	public static void main(String[] args) {
 		Function<Long, String> toString = s -> s.toString();
-		
+
 		//Metodo 1 - uso de apply()
 		String apply = toString.apply(2l);
 		System.out.println(apply);
